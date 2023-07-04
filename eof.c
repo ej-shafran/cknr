@@ -4,6 +4,8 @@ int main(void)
 {
 	char c;
 
+	printf("%d\n", EOF);
+
 	while (1) {
 		c = getchar();
 
