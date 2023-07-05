@@ -5,6 +5,14 @@ set -e
 filename=$1
 filename=${filename/.c/}
 
+handle_int() {
+  if [ -f "$filename" ]; then
+    rm "$filename"
+  fi
+}
+
+trap handle_int INT
+
 gcc -o "./$filename" "./$filename.c"
 eval "./$filename"
 rm "./$filename"
