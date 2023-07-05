@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define UPPER 25 /* number of lowercase letters */
+#define UPPER 26 /* number of lowercase letters */
 
 int main(void)
 {
@@ -23,7 +23,7 @@ int main(void)
 	}
 
 	for (int i = max; i > 0; i--) {
-		printf("%2d ", i);
+		printf("%3d ", i);
 		for (int j = 0; j < UPPER; j++) {
 			if (letters[j] >= i)
 				printf(" | ");
@@ -34,7 +34,7 @@ int main(void)
 	}
 
 	printf("   ");
-	for (int i = 0; i <= UPPER; i++) {
+	for (int i = 0; i < UPPER; i++) {
 		printf("%2c ", i + 'a');
 	}
 }
