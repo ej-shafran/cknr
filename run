@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+filename=$1
+filename=${filename/.c/}
+
+gcc -o "./$filename" "./$filename.c"
+eval "./$filename"
+rm "./$filename"
