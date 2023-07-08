@@ -14,5 +14,5 @@ handle_int() {
 trap handle_int INT
 
 gcc -o "./$filename" "./$filename.c"
-eval "./$filename"
+eval "'./$filename'"
 rm "./$filename"
